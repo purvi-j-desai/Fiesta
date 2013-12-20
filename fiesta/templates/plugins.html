@@ -1,0 +1,107 @@
+<html>
+<head>
+<title> Fiesta: Plugins</title>
+<script src="http://${config['myhost']}:5000/jquery.js"></script>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/> 
+<script type="text/javascript">
+
+function selectplugins()
+{
+ var url;
+ //alert('hello');
+ url = "http://${config['myhost']}:5000/plugins/setpluginurl?doc_id=${c.doc_id}&"
+ if(document.getElementById('celebrations').checked)
+	url = url + "plugin1=true"
+ else
+	url = url + "plugin1=false"
+ url = url + "&"
+ if(document.getElementById('paisan').checked)
+ 	url = url + "plugin2=true"
+ else
+	url = url + "plugin2=false"
+ url = url + "&"
+ if(document.getElementById('saltation').checked)
+ 	url = url + "plugin3=true"
+ else
+	url = url + "plugin3=false"
+ //alert('url : '+url);
+ jQuery.get(url, function() { alert ("success")} );
+ alert('Selected Plugin Added!');
+}
+
+</script>	
+<style type="text/css">
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+</style>	
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+	
+	<div id="partners_gep_ab_logged">
+	<img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+
+
+
+<div class="right">
+<a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile?doc_id=${c.doc_id}"  style="text-decoration:none; color: white"> Merchant Profile</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}" style="text-decoration:none; color: white"> Logout </a>
+</div>		 
+	   </div> <!-- right close-->
+	<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://${config['myhost']}:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://${config['myhost']}:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://${config['myhost']}:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://${config['myhost']}:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+</div>
+
+	<div class="highlights">
+		<div class ="hl_wrapper">
+			<div id="mainbody" align="center">
+			<h1 align="center" >Select plugins</h1>	<br /><br />
+			<img src='http://${config['myhost']}:5000/images/events.jpeg' />
+			<a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<img src='http://${config['myhost']}:5000/images/like.png' />
+			<a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<img src='http://${config['myhost']}:5000/images/postOnwall.png' />
+			<br>
+			<input type="checkbox" id="celebrations" value="celebrations" />Celebrations
+			<a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<input type="checkbox" id="paisan" value="paisan" />Paisan
+			<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<input type="checkbox" id="saltation" value="saltation" />Saltation
+			<br><br>
+			<button onclick="selectplugins()" id="id_send_button" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: white; background-color: #3B899B;" type="button">Select plugins</button>
+			<br><br>
+			<a href="http://${config['myhost']}:5000/retailer/redirectintegrate?doc_id=${c.doc_id}">
+			<button id="id_proceed" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: white; background-color: #3B899B;" type="button">Proceed to Integration</button>
+			
+			</a>
+
+
+			</div><!-- MAINBODY-->
+
+    		 </div>	<!-- hl-wrapper close-->
+     </div>	<!-- highlights close-->
+   </div>   <!--  backwrap-->
+
+<div class="sc_footer gep_bold">
+      <a href="http://${config['myhost']}:5000/homepage.html">Home</a> |  
+        <a href="http://${config['myhost']}:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://${config['myhost']}:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://${config['myhost']}:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+</body>
+</html>
+

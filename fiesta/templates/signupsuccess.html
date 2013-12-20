@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> Fiesta: signupSuccess</title>
+<script src="http://${config['myhost']}:5000/js/jquery.js"></script>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/> 
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+	
+	<div id="partners_gep_ab_logged">
+	<img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+
+<div class = right>
+	<a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile"  style="text-decoration:none; color: white">Merchant Profile</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}' style="text-decoration:none; color: white"> Logout </a>
+	</div>
+	 
+	   </div> <!-- right close-->
+	<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://${config['myhost']}:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://${config['myhost']}:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://${config['myhost']}:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://${config['myhost']}:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+	</div>  <!-- menu divider close-->
+
+<div class="highlights">
+		<div class ="hl_wrapper">
+			<div id="mainbody" align="center">
+	<h1>
+	Congratulations ${c.name}! You have successfully activated
+	<br>
+	Fiesta for "${c.store}".
+	</h1>
+		<div class="gep_margin_left7px">
+		<p class="gep_font14px gep_margin_top20px">The next step is to integrate ShopSocially into the order confirmation page of your store.</p>
+		<p class="gep_font14px gep_margin_top10px">You will need your store's Account ID to complete the next step.</p>
+		<p class="gep_font14px gep_margin_top20px">
+		Account ID:
+		<b class="gep_grey">${c.doc_id}</b>
+		</p>
+		<p class="gep_font14px gep_margin_top20px">
+		Your Account ID has been emailed to
+		<i>${c.email}</i>
+		with integration instructions.
+		</p>
+		<a href="http://${config['myhost']}:5000/retailer/redirectplugin?doc_id=${c.doc_id}">
+<button id="id_send_button" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: white; background-color: #3B899B;" type="button">
+Proceed</button>
+</a>
+	</div>
+        </div>
+</div>
+</div>
+
+
+<div class="sc_footer gep_bold">
+      <a href="http://${config['myhost']}:5000/homepage.html">Home</a> |  
+        <a href="http://${config['myhost']}:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://${config['myhost']}:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://${config['myhost']}:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+
+</body>
+</html>
+

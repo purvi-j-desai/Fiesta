@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> Fiesta: Integrate</title>
+<script src="http://${config['myhost']}:5000/js/jquery.js"></script>
+<script src="http://${config['myhost']}:5000/js/all.js"></script>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/> 
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+
+    <div id="partners_gep_ab_logged"> <img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+      <div class="right"> <a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile"  style="text-decoration:none; color: white">Merchant Profile</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href='https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}' style="text-decoration:none; color: white"> Logout </a> </div>
+      <!--Hit controller -->
+    </div>
+    <!--logged close-->
+    <ul id="nav" class="tabs blue-tabs">
+<li><a href="http://192.168.1.1:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://192.168.1.1:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://192.168.1.1:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://192.168.1.1:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+
+  </div>
+
+
+	<div class="highlights">
+		<div class ="hl_wrapper">
+			<div id="mainbody" align="center">
+<h1>
+	Integrate with Fiesta
+	<br>
+
+	</h1>
+<div class="integration_option" id="id_email_widget_root">
+	<div class="form_section">   
+	<div class="option_title gep_txtcenter gep_margin_btm10px">Email instructions to my technical team  
+</div>   
+ <div style="text-align: center; margin-bottom: 10px;" class="field_wrapper">       <br/>
+	<div class="gep_txtcenter"><img src="http://${config['myhost']}:5000/images/ama026.gif" height="20%" width="30%"></div>       <br/>
+				<div class="gep_font14px">Enter Email Address</div> <form> <input type="text" value="" style="width: 190px; padding: 5px;" id="id_email_inputbox" name = "email">
+</div>  
+<div class="gep_txtcenter" style="margin: 5px 0pt;">   <button type="button" style="font-size: 17px ! important; width: 200px; padding: 8px; font-weight: normal ! important;" id="id_send_button"  onclick = "sendmail(email.value)">Email Instructions</button></div></div>
+</div>
+</form>
+<div class="integration_option">
+        <div class="option_title gep_txtcenter gep_margin_btm10px">Show me instructions to integrate</div>
+        <div style="height: 150px;" class="gep_txtcenter"><marquee WIDTH=35% BEHAVIOR=ALTERNATE><img src="http://${config['myhost']}:5000/images/show-instructions.jpg" style="filter:alpha(opacity=50)"></marquee></div>
+        <div class="gep_txtcenter" style="margin: 15px 0pt 10px;">
+	    <a href="http://${config['myhost']}:5000/retailer/show_me_instruction?mid=${c.id}&store=${c.store_name}"><button style="font-size: 17px ! important; width: 200px; padding: 8px; font-weight: normal ! important;" type="button">See Instructions</button></a>
+        </div>
+    </div>
+</div>
+
+     </div>	<!-- hl-wrapper close-->
+     </div>	<!-- highlights close-->
+   </div>   <!--  backwrap-->
+</div>
+<div class="sc_footer gep_bold">
+      <a href="http://192.168.1.1:5000/homepage.html">Home</a> |  
+        <a href="http://192.168.1.1:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://192.168.1.1:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://192.168.1.1:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+
+</body>
+</html>
+

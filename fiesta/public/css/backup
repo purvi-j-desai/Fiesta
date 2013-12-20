@@ -1,0 +1,2 @@
+onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);"background: url('http://localhost:5000/images/backimg.png') repeat-x
+background: url(http://localhost:5000/images/back1.png);

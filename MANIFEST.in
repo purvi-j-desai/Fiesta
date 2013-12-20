@@ -1,0 +1,3 @@
+include fiesta/config/deployment.ini_tmpl
+recursive-include fiesta/public *
+recursive-include fiesta/templates *

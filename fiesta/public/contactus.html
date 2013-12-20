@@ -1,0 +1,210 @@
+<html>
+<head>
+<title> Fiesta home </title>
+<script src="http://192.168.1.1:5000/js/jquery.js"></script>
+<script type="text/javascript" src="http://192.168.1.1:5000/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://192.168.1.1:5000/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="http://192.168.1.1:5000/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="http://192.168.1.1:5000/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="http://192.168.1.1:5000/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="http://192.168.1.1:5000/css/style-projects-jquery.css" />    
+<link rel="stylesheet" type="text/css" href="http://192.168.1.1:5000/css/jquery.lightbox-0.5.css" media="screen" />
+<link rel="stylesheet" href="http://192.168.1.1:5000/css/main.css"media="screen" type="text/css"/> 
+<link type="text/css" href="http://192.168.1.1:5000/css/smoothness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<script type="text/javascript">
+	
+		$(function(){
+				// Tabs
+				$( "#tabs" ).tabs({
+			event: "mouseover"
+		});
+                 });
+		$(function() {
+	        $('#gallery a').lightBox();
+		
+    });
+
+	
+</script>	
+
+<!--<base target = "_blank" />-->
+<script>
+function PopupCenter(pageURL, title,w,h) {
+var left = (screen.width/2)-(w/2);
+//alert("left"+left)
+var top = (screen.height/2)-(h/2);
+//alert("top"+top)
+var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+}
+</script>
+
+
+
+<style type="text/css">
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+			p{width:100%;}
+</style>	
+</head>
+<body>
+<!--<object width="100%" data="head.html" align="top"></object> -->
+<div id="backwrap" class="bodybg">
+	
+
+	<div id="partners_gep_ab_logged">
+
+
+	<img src="http://192.168.1.1:5000/images/logo.png" height="1400%" width="25%" border="0" hspace=150% />
+		
+	   <div class="right">
+
+		</div> <!--Hit controller right close -->
+
+		
+	
+	</div>
+
+<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://192.168.1.1:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://192.168.1.1:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://192.168.1.1:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://192.168.1.1:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+</div>
+<div class="highlights">
+		<div class ="hl_wrapper">
+			
+
+<div id="mainbody">
+<br>
+ <h1 align="center" >Contact Us</h1>	
+
+
+          <div class="sc_container">
+        <!-- LEFT SECTION START -->
+      
+            
+
+<div class="sc_content">
+  
+  <div class="salesforce_form">
+
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <form method="POST" action="http://shopsocially.force.com/SpamCheck__W2C" id="general_contact_form"> 
+	<table width="100%" cellspacing="0" cellpadding="5" border="0" class="contact_forms">
+	    <input type="hidden" value="00DE0000000IvpC" name="orgid">
+            <input type="hidden" value="http://shopsocially.com/platform/contact-thanks.html" name="x-retURL">
+            <!--  NOTE: These fields are optional debugging elements.  Please uncomment   -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="kirtia@shopsocially.com">                                        -->
+            <!--<tr>
+                <th>Contact ShopSocially </th>
+                <th></th>
+            </tr>-->
+            <tbody><tr>
+		<td width="30%" valign="top" nowrap="" align="right">Name<span style="color: red;">*</span>
+ &nbsp;&nbsp;</td>
+              <td width="70%"><input type="text" name="name" maxlength="300" id="name"></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right">Website URL &nbsp;&nbsp;</td>
+              <td><input type="text" name="CASECF1" maxlength="100"></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right">Phone &nbsp;&nbsp;</td>
+              <td><input type="text" name="phone" maxlength="300" id="phone"></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right">E-mail<span style="color: red;">*</span>
+ &nbsp;&nbsp;</td>
+              <td><input type="text" name="email" maxlength="300" id="email"></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right">Country &nbsp;&nbsp;</td>
+              <td><input type="text" size="20" name="00NE0000000Grjn" maxlength="50" id="00NE0000000Grjn"></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right">Type of Query &nbsp;&nbsp;</td>
+            <td>
+			  <select title="Type of Query" name="00NE0000000Gqff" id="00NE0000000Gqff">
+                    <option value="-None-">-None-</option>
+                    <option value="General Info" selected="">General Info</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Report a Problem">Report a Problem</option>
+                    <option value="Integration">Integration</option>
+                    <option value="Other">Other</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right" style="height: 75px;">Description<span style="color: red;">*</span>
+ &nbsp;&nbsp;</td>
+              <td><textarea height="250" width="250" maxlength="3000" name="description" id="description"></textarea></td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap="" align="right" style="height: 75px;">Enter the text from the image<span style="color: red;">*</span>
+&nbsp;&nbsp; </td>
+		<td valign="middle"><input type="text" style="width: 115px; vertical-align: top;" id="captcha">
+<img style="vertical-align: top;" src="https://dgjcoqnzn763b.cloudfront.net/images/general/captcha.jpg">
+		    </td>
+            </tr>
+            <tr>
+            	<td valign="top">&nbsp;</td>
+                <td class="act_buttons">
+	      <input type="hidden" value="1" name="external" id="external">
+                   <button onclick=" " id="id_send_button" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: white; background-color: #3B899B;" type="button">Submit</button> 
+		</td>
+            </tr>
+        </tbody></table>
+    </form>
+        </div>
+ 
+ 
+</div>
+
+<!-- RIGHT SECTION START --> 
+
+ 
+
+<!-- RIGHT SECTION END --> 
+
+
+
+
+
+ 
+
+ 
+        
+        <!-- LEFT SECTION END -->
+        <!-- RIGHT SECTION START -->
+        
+<div class="sc_container_right">
+  <ul class="sc_navigation">
+   
+  </ul>
+
+</div>
+<div class="clear"></div>
+
+        <!-- RIGHT SECTION END -->
+    </div>
+	
+		
+ 
+</div>
+</div>
+
+</div>	
+
+
+</body>
+</html>
+
+

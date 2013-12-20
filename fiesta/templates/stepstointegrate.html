@@ -1,0 +1,109 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/shop.css"media="screen" type="text/css"/>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+	
+	<div id="partners_gep_ab_logged">
+	<img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+
+
+
+<div class="right">
+<a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile?doc_id=${c.doc_id}"  style="text-decoration:none; color: white"> Merchant Profile</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}" style="text-decoration:none; color: white"> Logout </a>
+</div>		 
+	   </div> <!-- right close-->
+	<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://${config['myhost']}:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://${config['myhost']}:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://${config['myhost']}:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://${config['myhost']}:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+	</div>
+
+<div class="highlights">
+		<div class ="hl_wrapper">
+			<div id="mainbody" align="center" >
+
+	<div id="documentation">
+	<h1>Integration Instructions</h1><br/>
+	<p>Get started to integrate with FIESTA</p>
+	<p>Follow these instructions</p>
+	<h2>JavaScript Integration</h2>
+	<p>
+	Copy and paste this JavaScript code block at the top of the the body section on your order 		confirmation page. 
+	</p>
+	</div><br/><br/>
+		<div class="box" align="left">
+			<div id="L1">
+			<span class="o">&lt;</span>
+			<span class="nx">script</span>
+			<span class="nx">language</span>
+			<span class="o">=</span>
+			<span>"javascript"</span>
+			<span class="nx">type</span>
+			<span class="o">=</span>
+			<span>"text/javascript"</span>
+			<span class="nx">src</span>
+			<span class="o">=</span>
+			<span>'http://${config['myhost']}:5000/js/all.js'</span>
+			<span class="o">&gt;&lt;</span>
+			<span>/script&gt;</span>
+			</div>
+
+			<div id="L2">
+			<span class="o">&lt;</span>
+			<span class="nx">script</span>
+			<span class="nx">language</span>
+			<span class="o">=</span>
+			<span>"javascript"</span>
+			<span class="nx">type</span>
+			<span class="o">=</span>
+			<span>"text/javascript"</span>
+			<span class="o">&gt;</span>
+			</div>
+
+			<div id="L3">
+			<span class="nx">init</span>
+			<span class="p">(</span>
+			<span class="s3">'${c.doc_id}'</span>
+			<span class="p">);</span>
+			</div>
+
+			<div id="L6">
+			<span class="o">&lt;</span>
+			<span>/script&gt;</span>
+			</div>
+
+			<div id="L7">
+			<span class="o">&lt;</span>
+			<span>iframe id = "fiesta_frame" style = "visibility:hidden; display:none" /&gt;
+                        </span>
+			</div>
+</div>
+                        </div>
+			</div>
+			</div>
+		</div>
+
+
+
+<div class="sc_footer gep_bold">
+      <a href="http://${config['myhost']}:5000/homepage.html">Home</a> |  
+        <a href="http://${config['myhost']}:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://${config['myhost']}:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://${config['myhost']}:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+
+</body>
+</html>

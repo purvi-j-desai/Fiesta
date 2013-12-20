@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>rotate images</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+#container {
+    width:679px;
+    height:513px;
+    padding:4px;
+    border:3px double #999;
+    margin:auto;
+ }
+#container img {
+    display:block;
+    border:0 solid;
+ }
+</style>
+
+<script type="text/javascript">
+
+window.onload=function() {
+   rotateImages();
+ }
+   var pics=[
+       'images/celeb.png',
+       'images/paison.png',
+       'images/saltation.png',
+       'images/askfrnd.png'];
+
+   var c=0;
+   var speed=4000;
+
+function rotateImages() {
+   document.getElementById('pic').src=pics[c];
+   c++;
+if(c==pics.length) {
+   c=0;
+ }
+setTimeout('rotateImages()',speed);
+ }
+
+</script>
+
+</head>
+<body background="images/bg197.jpg">
+<h1 align="center" color="maroon"> Fiesta Plugins</h1>
+<div id="container">
+<a id="lnk" href="http://www.htmlforums.com/">
+<img id="pic" src="images/celeb.png" alt=""/>
+</a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> Fiesta : Merchant Profile</title>
+<script src="http://localhost:5000/js/jquery.js"></script>
+<link rel="stylesheet" href="http://localhost:5000/css/main.css"media="screen" type="text/css"/> 
+<script src="http://localhost:5000/js/all.js"></script>
+<style type="text/css">
+
+#labelf {font-family : garamond, times; font-size: 10px }
+</style>
+
+
+
+
+<script type = "text/javascript">
+	
+
+	<% 
+        i = iter( c.merchant_plugin_urls )	
+        %>
+	alert("happening..");
+        var mylist = eval '(' + ${c.mydump} ')';
+        var i;
+	for(i in mylist) {
+  		alert("mylist - " + mylist[i]);
+	}
+	//for (j = 0; j < ${c.plugincount}; j++)  {
+	// 	% i.next()     
+	//	alert ("hello ${i.next()}");
+	//}
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="backwrap" class="bodybg">
+     <div id="menu_divider">
+     <div id="partners_gep_ab_logged">
+     <img src="http://localhost:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+     </div> <!-- right close-->
+
+
+
+
+
+     <ul id="nav" >
+                <li>  <a href="www.rediffmail.com">Home</a>   </li>
+                <li>  <a href="www.rediffmail.com">Intro Video</a>   </li>
+                <li>  <a href="www.rediffmail.com">How it works?</a>   </li>
+                <li>  <a href="www.rediffmail.com">Contact Us</a>  </li>
+
+     </ul>
+     </div>  <!-- menu divider close-->
+     </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Fiesta: signupSuccess</title>
+<script src="http://${config['myhost']}:5000/js/jquery.js"></script>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/>
+<script type="text/javascript">
+$(document).ready (function (){
+//alert("done");
+
+var shops = new Array();
+
+//--------------------------------------------
+//alert("cid"+${c.id});
+var url = 'http://${config['myhost']}:5000/userauth/getshops?id='+${c.id}+'&callback=?';
+//alert("before the call-"+url);
+jQuery.getJSON(url, 
+  function(data) {
+  //alert("Hello " + data.myshop);
+  shops = data.myshop;
+  //alert("shops " + shops[1]);
+  });
+
+//---------------------------------------------
+
+var body = document.getElementById("dataTables_wrapper");
+        var tbl     = document.createElement("table");
+        var tblBody = document.createElement("tbody");
+	
+           var row = document.createElement("tr");
+
+	    var cell1 = row.insertCell(0);
+            cell1.innerHTML = "Sr. no";
+
+	    var cell1 = row.insertCell(1);
+            cell1.innerHTML = "Online Store"
+		
+	    var cell1 = row.insertCell(2);
+            cell1.innerHTML = "Actions"
+
+            tblBody.appendChild(row);
+		row.setAttribute("border-bottom" ,"1px solid #FFFFFF"); 
+		row.setAttribute("height","25px");
+		row.setAttribute("bgcolor","#FFF8C6");
+		row.setAttribute("font-weight","bold");
+         	row.setAttribute("color","#7d5d41");
+
+	var x;
+	alert("Welcome!");
+	//alert("shops are: "+ shops);	
+        // creating all cells
+        for (x in shops) {
+            // creates a table row
+	  //  alert("in loop " + x)
+            var row = document.createElement("tr");
+
+           var cell1 = row.insertCell(0);
+            cell1.innerHTML = parseInt(x)+1
+
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = shops[x];
+	    url = "http://${config['myhost']}:5000/retailer/showshopinfo?fbid=${c.id}&store="+shops[x]; 
+ 	    //alert("url is: "+url);
+ 
+            var cell3 = row.insertCell(2);
+	   
+	   // alert("url is "+ url)
+	
+            cell3.innerHTML = '<a href = '+url+'> view </a>'
+		
+                 
+
+            // add the row to the end of the table body
+            tblBody.appendChild(row);
+        }
+
+        // put the <tbody> in the <table>
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 2;
+        tbl.setAttribute("border-collapse","collapse");
+	tbl.setAttribute("margin","0 auto");
+	tbl.setAttribute("width","60%");
+	tbl.setAttribute("border", "0");
+	tbl.setAttribute("text-align", "center");
+});
+
+
+
+function loadshopinfo(url) {
+	alert("in loadshopinfo " + url)
+	jQuery.get(url);
+	//alert("Hit");
+}
+
+
+
+</script>
+</head>
+<body>
+<div id="backwrap" class="bodybg">
+	
+
+<div id="partners_gep_ab_logged">
+	<img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+<div class="right">
+<a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile?doc_id=${c.id}"  style="text-decoration:none; color: white"> Merchant Profile</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}" style="text-decoration:none; color: white"> Logout </a>
+</div>	 
+	   </div> <!-- right close-->
+	<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://${config['myhost']}:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://${config['myhost']}:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://${config['myhost']}:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://${config['myhost']}:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+	</div>  <!-- menu divider close-->
+
+  <div class= "highlights">
+    <div class ="hl_wrapper">
+      <div id="mainbody">
+	<br/> <br/>
+        <div class="tab_header">
+          <div id= "tb-heading">Online Stores </div>
+        </div>
+  <div>
+<a href="http://${config['myhost']}:5000/retailer/signup?name=${c.name}&id=${c.id}">
+          <button id="id_send_button" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: #000000; background-color: #FFF8C6; margin: 40px 700px 10px" type="button" align="right">Add online Store</button></a>
+</div>
+        <div id="dataTables_wrapper"> 
+
+
+</div>
+
+       
+
+      </div> <!--mainbody-->
+      <br>
+   </div> <!--hl wraper close-->
+   </div><!--highlights close-->
+  
+  <div class="sc_footer gep_bold">
+      <a href="http://${config['myhost']}:5000/homepage.html">Home</a> |  
+        <a href="http://${config['myhost']}:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://${config['myhost']}:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://${config['myhost']}:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+</body>
+</html>

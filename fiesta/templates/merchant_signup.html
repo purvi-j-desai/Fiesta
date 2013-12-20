@@ -1,0 +1,100 @@
+<html>
+<head>
+<title> Fiesta : Merchant Signup </title>
+<script src="http://${config['myhost']}:5000/js/jquery.js"></script>
+<script src="http://${config['myhost']}:5000/js/menuscript.js"></script>
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/main.css"media="screen" type="text/css"/> 
+<link rel="stylesheet" href="http://${config['myhost']}:5000/css/menustyle.css"media="screen" type="text/css"/> 
+
+<script src="http://${config['myhost']}:5000/js/all.js"></script>
+<style type="text/css">
+
+#labelf {font-family : garamond, times; font-size: 10px }
+</style>
+
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+	
+	<div id="partners_gep_ab_logged">
+	<img src="http://${config['myhost']}:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+<div class="right">
+<a href=""  style="text-decoration:none; color: white" margin="10px 100px 0px"> Welcome ${c.name}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://${config['myhost']}:5000/retailer/showprofile?doc_id=${c.id}"  style="text-decoration:none; color: white"> Merchant Profile</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/logout.php?next=http://${config['myhost']}:5000/homepage.html&access_token=${config['accesstoken']}" style="text-decoration:none; color: white"> Logout </a>
+</div>	 
+	   </div> <!-- right close-->
+	<ul id="nav" class="tabs blue-tabs">
+<li><a href="http://${config['myhost']}:5000/homepage.html"> HOME</a>  </li>
+<li><a href="http://${config['myhost']}:5000/socialplugin.html"> Social Plugins</a>  </li>
+<li><a href="http://${config['myhost']}:5000/AboutUs.html"> About Us</a>  </li>
+<li><a href="http://${config['myhost']}:5000/contactus.html"> Contact Us</a>  </li>
+</ul>
+
+	</div>  <!-- menu divider close-->
+
+	<div class="highlights">
+		<div class ="hl_wrapper">
+			
+
+<div id="mainbody">
+<br>
+ <h1 align="center" >Merchant Registration for ${c.name}</h1>	
+	<br /><br />
+
+              
+<div id="labelf">
+ <form name="Signup" id="addmerchant">
+	<table width="80%" border="0" cellspacing="1" cellpadding="1" style="border:0px; color: #000000;" align="center" color="black">
+	
+			<tr> <th align="left">  <label for="Contact No: " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No:</span> <span class="required"> * </span> </label></th> <td> <input type="text" name="contact" /></td> </tr>
+		<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+	<tr> <th align="left">  <label for="Store Name: ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Store Name:<span class="required"> *</span></label></th> <td><input type="text" name="storename" /> </td> </tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+	<tr> <th align="left">  <label for="Title: ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dealer In: <span class="required"> * </span> </label> </th> <td><input type="text" name="mtitle" /></td> </tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+	<tr> <th align="left">  <label for="Site ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SiteURL: <span class="required"> * </span> </label> </th> <td><input type="text" name="site" /></td> </tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+	<tr> <td>  </td><td><button onclick="passRetailerInfo(contact.value,storename.value,mtitle.value,site.value, ${c.id})" id="id_send_button" style="font-size: 16px; width: 200px; height: 35px; padding: 8px; font-weight: normal; color: white; background-color: #3B899B;" type="button">Register with Fiesta</button> 
+<!--
+<a target="" onmouseout="setOutImg('3','');" onmouseover="setOverImg('3','');" href="passRetailerInfo(contact.value,storename.value,mtitle.value,site.value, ${c.id})">
+<img id="button1" vspace="1" hspace="1" border="0" src="http://${config['myhost']}:5000/images/buttons/button3up.png">
+</a>
+-->
+</td> </tr>
+<tr><th></th><td> </td><td> </td> </tr>	<tr><th></th><td> </td><td> </td></tr>	<tr><th></th><td> </td><td> </td></tr>
+</div>
+
+	</table>
+	 </form>
+
+	</div>
+
+      </div><!-- end form wrapper-->
+
+
+
+</div><!-- end wrapper-->
+
+
+
+     </div>	<!-- hl-wrapper close-->
+   </div>	<!-- highlights close-->
+   </div>   <!--  backwrap-->
+
+
+<div class="sc_footer gep_bold">
+      <a href="http://192.168.1.1:5000/homepage.html">Home</a> |  
+        <a href="http://192.168.1.1:5000/socialplugin.html">Social Plugins</a> |  
+        <a href="http://192.168.1.1:5000/AboutUs.html">About Fiesta</a> |  
+        <a href="http://192.168.1.1:5000/contactus.html">Contact Us</a> | 
+
+	<br/ ><br/>    
+       <span class="gep_font10px">*Padmaj*</span>
+</div>
+</body>
+</html>
+

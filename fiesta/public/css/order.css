@@ -1,0 +1,101 @@
+
+.pdp_image_block {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    width: 302px;
+}
+
+#productImageBox {
+    border: 1px solid #EEEEEE;
+    padding: 20px 0;
+    width: 300px;
+}
+
+.pdp_details_block {
+    color: #818181;
+    float: left;
+    width: 400px;
+}
+
+.pdp_title_section {
+    margin-bottom: 10px;
+}
+
+.pdp_title_section h1 {
+    color: #000000;
+    font-family: "Trebuchet MS",Tahoma,Helvetica,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 3px;
+}
+.pdp_details_sku {
+    font-size: 11px;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.pdp_details_write_review {
+    float: left;
+}
+
+a:link, a:visited {
+    color: #3172B4;
+    text-decoration: none;
+}
+
+.button_write_review {
+    background-position: 0 -441px;
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 19px;
+    line-height: 0;
+    outline: medium none;
+    text-indent: -3000px;
+    width: 91px;
+}
+
+.pdp_details_price {
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+.pdp_details_hs18Price {
+    color: #DB1717;
+    font-size: 22px;
+}
+
+.pdp_details_freeShipping {
+    font-size: 11px;
+    line-height: 24px;
+}
+
+.pdp_details_price_info {
+    font-size: 11px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.pdp_details_cod {
+    color: #333333;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 4px 0;
+}
+
+.productShippingInfo, .productpricetable {
+    clear: left;
+    color: #333333;
+    font-size: 12px;
+    table-layout: fixed;
+}

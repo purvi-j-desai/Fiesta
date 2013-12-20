@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> Fiesta home </title>
+<script src="http://localhost:5000/js/jquery.js"></script>
+<script type="text/javascript" src="http://localhost:5000/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://localhost:5000/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="http://localhost:5000/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="http://localhost:5000/css/style-projects-jquery.css" />    
+<link rel="stylesheet" type="text/css" href="http://localhost:5000/css/jquery.lightbox-0.5.css" media="screen" />
+<link rel="stylesheet" href="http://localhost:5000/css/main.css"media="screen" type="text/css"/> 
+<link type="text/css" href="http://localhost:5000/css/smoothness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<script type="text/javascript">
+		$(function(){
+				// Tabs
+				$('#tabs').tabs();
+                 });
+		$(function() {
+	        $('#gallery a').lightBox();
+    });
+
+function PopupCenter(pageURL, title,w,h) {
+alert("jj");
+var left = (screen.width/2)(w/2);
+var top = (screen.height/2)(h/2);
+var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+}
+
+</script>	
+<style type="text/css">
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+</style>	
+<base target="_blank" />
+
+</head>
+<body>
+
+<div id="backwrap" class="bodybg">
+	<div id="menu_divider">
+
+	<div id="partners_gep_ab_logged">
+	<img src="http://localhost:5000/images/logo.png" height="90" width="250" border="0" hspace=150 />
+		
+	   <div class="right">
+		<a href="" onMouseOver="this.style.color='#A8D7EA'" onMouseOut="this.style.color='#000" style="text-decoration:none; color: white"> Merchant Signup <img src="http://localhost:5000/images/fbconnect.jpeg" height="25"width="100" hspace="0" style="text-decoration:none; " border="0" onclick="PopupCenter('http://localhost:5000/userauth/auth?user=merchant','login','100','100')"> </a> 
+</div> <!--Hit controller -->
+</div> <!--logged close-->
+		<ul id="nav" >
+		<li> <a targate="_blank" href="http://localhost:5000/main.html" >Home</a>   </li>
+		<li>  <a href="www.rediffmail.com">Intro Video</a>   </li>
+		<li>   <a href="www.rediffmail.com">How it works?</a>   </li>
+		<li>  <a href="www.rediffmail.com">Contact Us</a>  </li>
+	
+		</ul>
+ 
+	 </div>
+	</div>  <!-- menu divider close-->
+
+</body>
+</html>
